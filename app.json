@@ -1,0 +1,81 @@
+{
+  "name": "MsBridger",
+  "displayName": "MsBridger",
+  "expo": {
+    "name": "MsBridger",
+    "slug": "ms-Bridger",
+    "scheme": "Ms.Bridger",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo11.png",
+    "splash": {
+      "image": "./assets/images/logo11.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#b4b3f4"
+    },
+    "updates": {
+      "enabled": true, 
+      "fallbackToCacheTimeout": 0
+    },
+    "jsEngine": "hermes",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "icon": "./assets/images/logo12.png",
+      "package": "com.msbridgerbyphil",
+      "versionCode": 3,
+
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo13.png",
+        "backgroundImage": "./assets/images/app-icon-android-adaptive-background.png"
+      },
+      "splash": {
+        "image": "./assets/images/logo11.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#b4b3f4"
+      }
+    },
+    "ios": {
+      "icon": "./assets/images/app-icon-ios.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.msbridgerbyphil",
+      "splash": {
+        "image": "./assets/images/logo11.png",
+        "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#b4b3f4"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/app-icon-web-favicon.png",
+      "splash": {
+        "image": "./assets/images/splash-logo-web.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#191015"
+      },
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-localization",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "newArchEnabled": false
+          },
+          "android": {
+            "newArchEnabled": false
+          }
+        }
+      ], 
+      "expo-font"
+    ],
+    "experiments": {
+      "tsconfigPaths": true
+    }
+  },
+  "ignite": {
+    "version": "UNKNOWN"
+  }
+}

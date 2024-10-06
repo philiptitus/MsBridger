@@ -1,164 +1,136 @@
-# Welcome to your new ignited app!
+Here’s an updated template for **MsBridger** with a focus on the frontend, incorporating the AI Budget Planner app features, Pirate API integration, and all other details you requested:
+
+---
+
+# MsBridger - Your AI-Powered Budget Planner 📊
 
 [![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
 
-## The latest and greatest boilerplate for Infinite Red opinions
+## Overview:
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+**MsBridger** is an AI-powered mobile application designed to help users efficiently manage their finances. From tracking income and expenses to managing budgets and savings plans, MsBridger offers a user-friendly, mobile-first solution for all financial needs.
 
-Currently includes:
+The app is powered by the **Pirate API**, a Django-based server that manages data and interactions. You can find the backend source code [here](https://github.com/philiptitus/bridger.git).
 
-- React Native
-- React Navigation
-- MobX State Tree
-- TypeScript
-- And more!
+---
 
-## Quick Start
+## Tech Stack:
 
-The Ignite boilerplate project's structure will look similar to this:
+- **Frontend**: React Native
+  - Responsive and high-performance mobile application built for both iOS and Android.
+  - Utilizes the **Ignite** React Native template for efficient setup and consistent development practices.
+  - Seamless integration of AI-powered features, ensuring an intuitive user experience.
+
+- **AI Integration**: Google Gemini
+  - Offers intelligent financial analysis and personalized budgeting advice.
+  - Machine learning algorithms predict future expenses and provide insights based on spending habits.
+
+- **Backend**: Django (via Pirate API)
+  - Handles secure data processing, financial transactions, and RESTful API services.
+  - Provides robust user management and financial reporting infrastructure.
+
+---
+
+## Quick Start 🚀
+
+Here’s how the **MsBridger** mobile project is structured:
 
 ```
-ignite-project
+msbridger-project
 ├── app
-│   ├── components
-│   ├── config
-│   ├── i18n
-│   ├── models
-│   ├── navigators
-│   ├── screens
-│   ├── services
-│   ├── theme
-│   ├── utils
-│   └── app.tsx
+│   ├── components
+│   ├── config
+│   ├── i18n
+│   ├── models
+│   ├── navigators
+│   ├── screens
+│   ├── services
+│   ├── theme
+│   ├── utils
+│   └── app.tsx
 ├── assets
-│   ├── icons
-│   └── images
+│   ├── icons
+│   └── images
 ├── test
-│   ├── __snapshots__
-│   ├── mockFile.ts
-│   └── setup.ts
-├── README.md
+│   ├── __snapshots__
+│   ├── mockFile.ts
+│   └── setup.ts
 ├── android
-│   ├── app
-│   ├── build.gradle
-│   ├── gradle
-│   ├── gradle.properties
-│   ├── gradlew
-│   ├── gradlew.bat
-│   ├── keystores
-│   └── settings.gradle
-├── ignite
-│   └── templates
-|       |── app-icon
-│       ├── component
-│       ├── model
-│       ├── navigator
-│       └── screen
-├── index.js
 ├── ios
-│   ├── IgniteProject
-│   ├── IgniteProject-tvOS
-│   ├── IgniteProject-tvOSTests
-│   ├── IgniteProject.xcodeproj
-│   └── IgniteProjectTests
-├── .env
+├── index.js
 └── package.json
-
 ```
 
-### ./app directory
+### **./app directory**
 
-Included in an Ignite boilerplate project is the `app` directory. This is a directory you would normally have to create when using vanilla React Native.
+- **components**: Reusable UI components to build screens.
+- **i18n**: Contains translations for multi-language support.
+- **models**: State management models using **MobX State Tree**.
+- **navigators**: React Navigation setup for managing app screens.
+- **screens**: Complete screens such as income tracking, expense reports, and savings plans.
+- **services**: External service integrations, including the Pirate API.
+- **theme**: Defines the app’s styling, including colors and typography.
+- **utils**: Utility functions shared across the app.
+- **app.tsx**: Entry point of the application.
 
-The inside of the `app` directory looks similar to the following:
+---
 
-```
-app
-├── components
-├── config
-├── i18n
-├── models
-├── navigators
-├── screens
-├── services
-├── theme
-├── utils
-└── app.tsx
-```
+## Features 🏆
 
-**components**
-This is where your reusable components live which help you build your screens.
+- **Income & Expense Tracking**: 
+  Easily log and categorize your income and expenses in one place.
+  
+- **Budget Management**:
+  Set financial goals and monitor your progress. Get alerts when nearing budget limits.
 
-**i18n**
-This is where your translations will live if you are using `react-native-i18n`.
+- **Savings Plans**:
+  Create and track savings plans with customizable goals.
 
-**models**
-This is where your app's models will live. Each model has a directory which will contain the `mobx-state-tree` model file, test file, and any other supporting files like actions, types, etc.
+- **AI Financial Insights**:
+  AI-driven insights powered by **Google Gemini** help users make smarter financial decisions based on spending trends.
 
-**navigators**
-This is where your `react-navigation` navigators will live.
+- **Responsive UI**:
+  Smooth and user-friendly mobile interface for managing finances anytime, anywhere.
 
-**screens**
-This is where your screen components will live. A screen is a React component which will take up the entire screen and be part of the navigation hierarchy. Each screen will have a directory containing the `.tsx` file, along with any assets or other helper files.
+---
 
-**services**
-Any services that interface with the outside world will live here (think REST APIs, Push Notifications, etc.).
+## Running the App
 
-**theme**
-Here lives the theme for your application, including spacing, colors, and typography.
+To get the mobile app running locally:
 
-**utils**
-This is a great place to put miscellaneous helpers and utilities. Things like date helpers, formatters, etc. are often found here. However, it should only be used for things that are truly shared across your application. If a helper or utility is only used by a specific component or model, consider co-locating your helper with that component or model.
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/philiptitus/msbridger-mobile.git
+   cd msbridger-mobile
+   ```
 
-**app.tsx** This is the entry point to your app. This is where you will find the main App component which renders the rest of the application.
+2. **Install Dependencies**  
+   ```bash
+   npm install
+   ```
 
-### ./assets directory
+3. **Start the Application**  
+   ```bash
+   npx expo start
+   ```
 
-This directory is designed to organize and store various assets, making it easy for you to manage and use them in your application. The assets are further categorized into subdirectories, including `icons` and `images`:
+4. **Preview**  
+   - Open in [Expo Go](https://expo.dev/go)
+   - Run on an Android/iOS simulator.
 
-```
-assets
-├── icons
-└── images
-```
+---
 
-**icons**
-This is where your icon assets will live. These icons can be used for buttons, navigation elements, or any other UI components. The recommended format for icons is PNG, but other formats can be used as well.
+## Additional Resources 📚
 
-Ignite comes with a built-in `Icon` component. You can find detailed usage instructions in the [docs](https://github.com/infinitered/ignite/blob/master/docs/Components-Icon.md).
+- [Expo Documentation](https://docs.expo.dev/)  
+- [React Native Documentation](https://reactnative.dev/docs/getting-started)
 
-**images**
-This is where your images will live, such as background images, logos, or any other graphics. You can use various formats such as PNG, JPEG, or GIF for your images.
+---
 
-Another valuable built-in component within Ignite is the `AutoImage` component. You can find detailed usage instructions in the [docs](https://github.com/infinitered/ignite/blob/master/docs/Components-AutoImage.md).
+### **License**
 
-How to use your `icon` or `image` assets:
+**Copyright Philip Titus 2024**
 
-```
-import { Image } from 'react-native';
+---
 
-const MyComponent = () => {
-  return (
-    <Image source={require('../assets/images/my_image.png')} />
-  );
-};
-```
-
-### ./ignite directory
-
-The `ignite` directory stores all things Ignite, including CLI and boilerplate items. Here you will find templates you can customize to help you get started with React Native.
-
-### ./test directory
-
-This directory will hold your Jest configs and mocks.
-
-## Running Maestro end-to-end tests
-
-Follow our [Maestro Setup](https://ignitecookbook.com/docs/recipes/MaestroSetup) recipe from the [Ignite Cookbook](https://ignitecookbook.com/)!
-
-## Previous Boilerplates
-
-- [2018 aka Bowser](https://github.com/infinitered/ignite-bowser)
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
+This version now emphasizes the **frontend**, the app’s AI capabilities, and the integration with the **Pirate API**. The structure is concise and focused on MsBridger's mobile experience. Let me know if you'd like any more tweaks!
